@@ -1,5 +1,6 @@
 #pragma once
 #include "Pracownik.h"
+
 class Nauczyciel :
 	public Pracownik
 {
@@ -13,10 +14,10 @@ public:
 
 	char * Przedmiot();
 	double Staz();
-	void Przedmiot(const char * _przed);
+	//void Przedmiot(const char * _przed);
 	void Staz(double _staz);
-	void WprowadzDane();
-	char * Tabela();
+	//void WprowadzDane();
+	//char * Tabela();
 	char * Wizytowka();
 };
 

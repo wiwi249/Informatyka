@@ -1,5 +1,4 @@
 #include "Nauczyciel.h"
-#include "Data.h"
 #include <iostream>
 
 
@@ -18,7 +17,19 @@ Nauczyciel::Nauczyciel(char * _imie, char * _nazwisko, Data _data, char * _przed
 }
 
 char * Nauczyciel::Wizytowka() {
-	char * buf;
-	sprintf(buf, "Zawod: Nauczyciel\nImie i nazwisko: %s %s\nData urodzenia: %s\nDane dodatkowe: %s %f lat");
+	char * buf = "";
+	sprintf(buf, "Zawod: Nauczyciel\nImie i nazwisko: %s %s\nData urodzenia: %d.%d.%d\nDane dodatkowe: %s %f lat", pszImie, pszNazwisko, DataUrodzenia.Dzien(), DataUrodzenia.Miesiac(), DataUrodzenia.Rok(), przedmiot, staz);
 	return buf;
+}
+
+char * Nauczyciel::Przedmiot() {
+	return this->przedmiot;
+}
+
+double Nauczyciel::Staz() {
+	return this->staz;
+}
+
+void Nauczyciel::Staz(double staz) {
+	this->staz = staz;
 }
